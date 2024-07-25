@@ -20,7 +20,7 @@ Route::controller(UserController::class)->group(function(){
 });
 Route::controller(AdsController::class)->group(function(){
     Route::get('/users/ads', 'showAds')->name('ads');
-    Route::get('/ads/details/{id}', 'viewdetails')->name('ads.viewdetails');
+
 
 });
 // مسارات محمية بميدل وير auth
@@ -30,6 +30,7 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/users/create-ads', 'createAdIndex')->name('ads.create');
         Route::post('/users/create-ads', 'store')->name('ads.store');
+        Route::get('/ads/details/{id}', 'viewdetails')->name('ads.viewdetails');
 
     });
 

@@ -53,14 +53,11 @@
                 <li class="item">
                     <a class="link" href="{{ route('ads') }}">Ads</a>
                 </li>
-                <li class="item">
-                    <a class="link" href="#benefits">Benefits</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#contact">Contact</a>
-                </li>
+
                 <li class="item ml-md-3">
-                    <a href="{{ url('components.html') }}" class="btn btn-primary">Components</a>
+
+                        <a href="{{ route('ads.create') }}" class="btn btn-primary">Create New Ad</a>
+
                 </li>
                 <li class="item">
                     <ul class="nav ml-auto">
