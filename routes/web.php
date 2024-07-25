@@ -14,7 +14,7 @@ Route::controller(UserController::class)->group(function(){
     Route::post('/users/login', 'login');
 
 
-    Route::get('/users/profile/{id}', 'viewprofile')->name('users.viewprofile');
+
     Route::get('/users/home', 'index')->name('home');
 
 });
@@ -37,6 +37,7 @@ Route::middleware(['auth'])->group(function () {
     // مسارات المستخدمين المحمية
     Route::controller(UserController::class)->group(function(){
         Route::post('/logout', 'logout')->name('logout');
+        Route::get('/users/profile/{id}', 'viewprofile')->name('users.viewprofile');
     });
 
 
